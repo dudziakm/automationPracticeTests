@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'com.selenium'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '2.23.0'
+
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.4.0'
+
+    // https://mvnrepository.com/artifact/org.fluentlenium/fluentlenium-assertj
+    testCompile group: 'org.fluentlenium', name: 'fluentlenium-assertj', version: '4.1.1'
+
+    // https://mvnrepository.com/artifact/org.fluentlenium/fluentlenium-junit
+    compile group: 'org.fluentlenium', name: 'fluentlenium-junit', version: '4.1.1'
+
+
+}
