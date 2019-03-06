@@ -3,8 +3,12 @@ package com.javatest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.concurrent.TimeUnit;
+
 public class PageObject {
     protected WebDriver driver;
+
+
 
     public PageObject(){}
 

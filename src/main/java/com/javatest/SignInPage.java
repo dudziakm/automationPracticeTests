@@ -1,8 +1,13 @@
 package com.javatest;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 public class SignInPage extends PageObject {
 
@@ -13,11 +18,8 @@ public class SignInPage extends PageObject {
     @FindBy(id = "SubmitCreate")
     private WebElement submitCreateAccountButton;
 
-    @FindBy(css = "div.alert ol li ")
+    @FindBy(id = "create_account_error")
     private WebElement errorMsg;
-// #create_account_error
-    // alert alert-danger
-
 
     // Log in to existing account:
     @FindBy(id = "email")
@@ -29,6 +31,7 @@ public class SignInPage extends PageObject {
     @FindBy(id = "SubmitLogin")
     private WebElement submitLoginButton;
 
+    WebDriverWait wait = new WebDriverWait(driver, 10);
 
     public SignInPage(WebDriver driver) {
         super(driver);
@@ -48,7 +51,7 @@ public class SignInPage extends PageObject {
     }
 
     public String getErrorMsg(){
-        System.out.println(errorMsg.getText());
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("create_account_error")));
         return errorMsg.getText();
     }
 

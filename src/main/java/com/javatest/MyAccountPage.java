@@ -9,6 +9,9 @@ public class MyAccountPage extends PageObject {
     @FindBy(css = "h1.page-heading")
     private WebElement myAccountHeader;
 
+    @FindBy(className = "logout")
+    private WebElement logOutButton;
+
     public MyAccountPage(WebDriver driver) {
         super(driver);
     }
@@ -21,5 +24,10 @@ public class MyAccountPage extends PageObject {
     public boolean isUserLogged() {
 //        System.out.println(getPageHeader());
         return getPageHeader().equals("MY ACCOUNT");
+    }
+
+    public SignInPage logOut(){
+        logOutButton.click();
+        return new SignInPage(driver);
     }
 }
