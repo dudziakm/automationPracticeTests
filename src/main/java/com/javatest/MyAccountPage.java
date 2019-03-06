@@ -22,7 +22,6 @@ public class MyAccountPage extends PageObject {
     }
 
     public boolean isUserLogged() {
-//        System.out.println(getPageHeader());
         return getPageHeader().equals("MY ACCOUNT");
     }
 

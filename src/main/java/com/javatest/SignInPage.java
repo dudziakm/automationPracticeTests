@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.concurrent.TimeUnit;
-
 public class SignInPage extends PageObject {
 
     // Create new account:
@@ -51,7 +49,7 @@ public class SignInPage extends PageObject {
     }
 
     public String getErrorMsg(){
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("create_account_error")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("create_account_error")));
         return errorMsg.getText();
     }
 

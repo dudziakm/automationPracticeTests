@@ -13,7 +13,6 @@ public class SeleniumTest {
     private static final String SHOP = "http://automationpractice.com";
 
     protected static WebDriver driver;
-    //private MyProperties myProperties = new MyProperties();
 
     @Before
     public void setUp() {

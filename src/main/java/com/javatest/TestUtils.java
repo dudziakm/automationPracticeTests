@@ -1,12 +1,7 @@
 package com.javatest;
 
-import org.apache.commons.lang3.RandomStringUtils;
-import org.apache.commons.text.CharacterPredicates;
-import org.apache.commons.text.RandomStringGenerator;
-
 import java.math.BigInteger;
 import java.security.SecureRandom;
-import java.util.Random;
 
 public class TestUtils {
 

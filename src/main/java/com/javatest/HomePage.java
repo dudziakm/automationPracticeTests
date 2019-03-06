@@ -7,9 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class HomePage extends PageObject{
 
     @FindBy(css = "a.login")
-    //or class = "login"
     private WebElement singInButton;
-
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -19,6 +17,4 @@ public class HomePage extends PageObject{
         singInButton.click();
         return new SignInPage(driver);
     }
-
-
 }

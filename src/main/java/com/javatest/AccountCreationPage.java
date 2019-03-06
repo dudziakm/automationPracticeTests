@@ -93,13 +93,8 @@ public class AccountCreationPage extends PageObject{
         addressInput.sendKeys(TestUtils.generateRandToken(4));
         cityInput.sendKeys(TestUtils.generateRandToken(3));
         stateAlabama.click();
-        //stateCombo.selectByIndex(2);
-        //stateCombo.getFirstSelectedOption();
-        //stateCombo.selectByVisibleText("Michigan");
-        //stateCombo.selectByValue("22"); //Michigan
         postcodeInput.sendKeys("12345");
         mobilePhoneInput.sendKeys("123456789");
-
         submitAccountButton.click();
         return new MyAccountPage(driver);
     }

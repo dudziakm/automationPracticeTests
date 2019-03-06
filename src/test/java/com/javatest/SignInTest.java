@@ -1,12 +1,10 @@
 package com.javatest;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
 public class SignInTest extends SeleniumTest {
-
     @Test
     public void shouldLoginToExistingAccount(){
         HomePage homePage = new HomePage(driver);
@@ -30,7 +28,7 @@ public class SignInTest extends SeleniumTest {
     public void shouldNotAllowToUseExistingEmail(){
         HomePage homePage = new HomePage(driver);
         SignInPage signInPage = homePage.singIn();
-        AccountCreationPage accountCreationPage = signInPage.createNewAccount("test1234@o2.pol");
+        signInPage.createNewAccount("test1234@o2.pol");
         Assert.assertTrue(signInPage.isEmailAlreadyExists());
     }
 
